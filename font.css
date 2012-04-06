@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'icon';
+	src: url('livia-Regular.ttf') format('ttf');
+}
+
+.font1 {
+	font-family: "icon", livia-Regular;
+}

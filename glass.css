@@ -1,0 +1,16 @@
+body {
+	background-color: #e4e4e4;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+.glass {
+	background-color: #fff;
+	border: 1px solid #eee;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	display: inline-block;
+	*display: inline;
+	
+}
+

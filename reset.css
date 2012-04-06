@@ -1,0 +1,228 @@
+body {
+	background-color: #fff;
+	font: .9em Arial, Helvetica, sans-serif;
+}
+
+h2 {
+	background: none repeat scroll 0 0 #cccccc;
+	border-radius: 5px 5px 0 0;
+	font: 14px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	margin: 2em auto 0;
+	padding: 8px;
+	width: 384px;
+}
+
+.block {
+	background: none repeat scroll 0 0 #ffffff;
+	height: 150px;
+	margin: 0 auto 2em;
+	width: 400px;
+}
+
+.content {
+	width: 400px;
+	height: 150px;
+	display: -moz-box;
+}
+
+.font-big {
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	font-size: 24px;
+}
+
+.font-medium {
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	font-size: 20px;
+}
+
+.font-small {
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	font-size: 16px;
+}
+
+.bgcolor1 {
+	background: none repeat scroll 0 0 #FFCCCC;
+}
+
+.bgcolor2 {
+	background: none repeat scroll 0 0 #CCFFCC;
+}
+
+.bgcolor3 {
+	background: none repeat scroll 0 0 #CCCCFF;
+}
+
+/**
+ * 文本阴影效果
+ */
+.shadow2px {
+	text-shadow:2px 2px 2px #33539c,
+				2px 2px 2px #33539c,
+				2px 2px 2px #33539c;
+}
+
+.shadow-paper {
+	display: inline-block;
+	*display: inline;
+	width: 200px;
+	height: 248px;
+	margin: 20px;
+	background-color: #fff;
+	border: 1px solid #eee;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27),
+				0 0 60px rgba(0, 0, 0, 0.06) inset;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27),
+					 0 0 60px rgba(0, 0, 0, 0.06) inset;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27),
+						0 0 60px rgba(0, 0, 0, 0.06) inset;
+	position: relative;
+	*zoom: 1;
+}
+
+.shadow-paper:before {
+	-moz-transform: skew(-15deg) rotate(-6deg);
+	-webkit-transform: skew(-15deg) rotate(-6deg);
+	transform: skew(-15deg) rotate(-6deg);
+	left: 15px;
+}
+
+.shadow-paper:after {
+	-moz-transform: skew(15deg) rotate(6deg);
+	-webkit-transform: skew(15deg) rotate(6deg);
+	transform: skew(15deg) rotate(6deg);
+	right: 15px;
+}
+
+.shadow-paper:before, .shadow-paper:after {
+	width: 70%;
+	height: 55%;
+	content: " ";
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+	position: absolute;
+	bottom: 10px;
+	z-index: -1;
+}
+.shadow-paper2 {
+	background-color: #DDD;
+}
+.shadow-paper2:after{
+	width: 180px;
+	height: 30px;
+	content: " ";
+	margin-left: -90px;
+	border: 1px solid rgba(200, 200, 200, .8);
+	background-color: rgb(254,254,254);
+
+	box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+	transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+
+	position: absolute;
+	left: 50%;
+	top: 100px;
+}
+
+.shadow-paper2:before {
+	transform: skew(-15deg) rotate(-5deg);
+	-moz-transform: skew(-15deg) rotate(-5deg);
+	-webkit-transform: skew(-15deg) rotate(-5deg);
+	left: 15px;
+}
+
+.shadow-paper2:after {
+	transform: skew(15deg) rotate(5deg);
+	-moz-transform: skew(15deg) rotate(5deg);
+	-webkit-transform: skew(15deg) rotate(5deg);
+	right: 15px;
+}
+
+.shadow-paper2:before .shadow-paper2:after {
+	width:90%;
+	height: 20%;
+	content: " ";
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+	position: absolute;
+	bottom: 22px;
+	z-index: -1;
+}
+
+/**
+ * 盒模型
+ */
+#test1.box {
+	box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+}
+
+#test2.box {
+	box-orient: vertical;
+	-moz-box-orient: vertical;
+	-webkit-box-orient: vertical;
+
+	box-direction: reverse;
+	-webkit-box-direction: reverse;
+	-moz-box-direction: reverse;
+}
+
+#test3.box {
+	box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+
+	box-align: center;
+	-moz-box-align: center;
+	-webkit-box-align: center;
+
+	box-pack: center;
+	-moz-box-pack: center;
+	-webkit-box-pack: center;
+}
+
+.box1 {
+	box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+}
+.box2 {
+	box-flex: 2;
+	-moz-box-flex: 2;
+	-webkit-box-flex: 2;
+}
+.box3 {
+	box-flex: 3;
+	-moz-box-flex: 3;
+	-webkit-box-flex: 3;
+}
+
+.box4 {
+	width: 200px;
+}
+
+.v1 {
+	box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-webkit-box-ordinal-group: 1;
+}
+
+.v2 {
+	box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
+	-webkit-box-ordinal-group: 2;
+}
+
+.v3 {
+	box-ordinal-group: 3;
+	-moz-box-ordinal-group: 3;
+	-webkit-box-ordinal-group: 3;
+}
+

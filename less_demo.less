@@ -1,0 +1,83 @@
+#
+h1 {
+	color:#0982c1;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+@mainColor: #0982c1;
+@siteWidth: 1024px;
+@borderStyle: dotted;
+body {
+	color: @mainColor;
+	border: 1px @borderStyle @mainColor;
+	max-width: @siteWidth;
+}
+
+section {
+	margin: 10px;
+	nav {
+		height: 25x;
+		a {
+			color: #0982c1;
+			:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.error(@borderWidth: 2px) {
+	border: @borderWidth solid #f00;
+	color: #f00;
+}
+
+.generic-error {
+	padding: 20px;
+	margin: 4px;
+	.error();
+}
+
+.login-error {
+	left: 120px;
+	position: absolute;
+	top: 20px;
+	.error(5px);
+}
+
+.block {
+	margin: 10px 5px;
+	padding: 2px;
+}
+
+p {
+	.block;
+	border: 1px solid #eee;
+}
+
+ul {
+	width: 100px;
+	margin: 20px;
+	border: 1px dashed #33539c;
+	ol {
+		.block;
+		color: #3539c;
+		text-transform: uppercase;
+	}
+}
+
+.border-radius(@values) {
+	-webkit-border-radius: @values;
+	-moz-border-radius: @values;
+	border-radius: @values;
+}
+
+.radius {
+	.border-radius(10px);
+	width: 100px;
+	height: 100px;
+	border: 1px dashed #33539c;
+	margin: 20px;
+}

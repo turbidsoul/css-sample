@@ -8,7 +8,7 @@ body {
 	width: 400px;
 	height: 200px;
 	background: none repeat scroll 0 0 #ccc;
-	margin: 0 auto 0px;
+	margin: 0 auto 0;
 	top: 100px;
 	left: 500px;
 	position: absolute;
@@ -17,9 +17,9 @@ body {
 
 .box_round {
 
-	border-radius: 12px;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
+	border-radius: 12px;
 
 	-moz-background-clip: padding;
 	-webkit-background-clip: padding-box;
@@ -28,9 +28,9 @@ body {
 
 .box_shadow {
 
-	-webkit-box-shadow: 0px 0px 10px 0px #ffffff;
-    -moz-box-shadow: 	0px 0px 10px 0px #ffffff;
-    box-shadow: 		0px 0px 10px 0px #ffffff;
+	-webkit-box-shadow: 0 0 10px 0 #ffffff;
+    -moz-box-shadow: 	0 0 10px 0 #ffffff;
+    box-shadow: 		0 0 10px 0 #ffffff;
 }
 
 .box_gradient {
@@ -43,33 +43,34 @@ body {
 }
 
 .box_rotate {
-  	transform: rotate(7.5deg);
-    -moz-transform: rotate(7.5deg); 
   	-webkit-transform: rotate(7.5deg); 
+    -moz-transform: rotate(7.5deg); 
+  	transform: rotate(7.5deg);
 
 }
 
 .box_scale {
-	transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	-webkit-transform: scale(0.8);
+	transform: scale(0.8);
 }
 
 .box_scale_rotate {
-	transform: rotate(7.5deg) scale(0.7);
 	-moz-transform: rotate(7.5deg) scale(0.7);
 	-webkit-transform: rotate(7.5deg) scale(0.7);
+	transform: rotate(7.5deg) scale(0.7);
 }
 
 .box_3dtransforms {
-	perspective: 300;
 	-moz-perspective: 300;
 	--webkit-perspective: 300;
-	transform: rotateY(180deg);
+	perspective: 300;
+	
 	-moz-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 
-	transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	--webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }

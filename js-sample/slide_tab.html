@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		div{
+			position: relative;
+			float: left;
+			width: 530px;
+			overflow: hidden;
+			height: 128px;
+			border: 1px solid #e3e3e3;
+			box-shadow: 0 0 5px #e3e3e3,
+						0 0 7px #e3e3e3;
+		}
+
+		div dd{
+			position: relative;
+			float:  left;
+			overflow: hidden;
+			height: 100px;
+			margin-left: 0px;
+			width: 1060px;
+			margin-top: 2px;
+		}
+
+		div dd dl{
+			float: left;
+			margin: 0 2px;
+			width: 100px;
+			height: 98px;
+			background-color: #e3e3e3;
+			border: 1px solid #868686;
+		}
+
+		div dd dl:hover {
+			background-color: #3e3e3e;
+		}
+
+		h2 {
+			margin-top: 0;
+			font-size: 14px;
+			margin-bottom: 0px;
+		}
+
+		h2 a {
+			float: right;
+			border: 1px solid #e3e3e3;
+			width: 20px;
+			height: 20px;
+			margin-top: 2px;
+		}
+
+		h2 a:hover {
+			border: 1px solid #000;
+		}
+
+		h2 a.prev {
+			border-top-left-radius: 50%;
+			border-bottom-left-radius: 50%;
+			margin-left: 0;
+			border-right: 1px;
+		}
+
+		h2 a.next {
+			border-top-right-radius: 50%;
+			border-bottom-right-radius: 50%;
+			margin-right: 2px;
+			border-left: 1px solid #e3e3e3;
+
+		}
+	</style>
+	<script type="text/javascript">
+		var timer;
+		function nextSiblingElement() {
+			var dd = document.getElementById('next').parentElement.nextElementSibling;
+			var left = parseInt(dd.style.left.slice(1, dd.style.left.length - 2));
+			left = left ? left + 2 : 2;
+			dd.style.left = "-" + left + "px";
+			if(left % 106 === 0) {
+				clearInterval(timer);
+				timer = null;
+			}
+		}
+
+		function prevSibingElement() {
+			var dd = document.getElementById('prev').parentElement.nextElementSibling;
+			var left = parseInt(dd.style.left.slice(1, dd.style.left.length - 2));
+			left = left ? left - 2 : 0;
+			dd.style.left = "-" + left + "px";
+			if(left % 106 === 0) {
+				clearInterval(timer);
+				timer = null;
+			}
+		}
+
+		function next(event) {
+			var dd = event.target.parentElement.nextElementSibling;
+			var left = dd.style.left.slice(1, dd.style.left.length - 2);
+			if(parseInt(left) >= (106 * 5)) {
+				return;
+			}
+			timer = setInterval(nextSiblingElement, 1);
+		}
+
+		function prev(event) {
+			var dd = event.target.parentElement.nextElementSibling;
+			var left = dd.style.left.slice(1, dd.style.left.length - 2);
+			if(left === 0) {
+				return;
+			}
+			timer = setInterval(prevSibingElement, 1);
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<h2>
+			<a href="#" class="next" id="next" onclick="next(event);"></a>
+			<a href="#" class="prev" id="prev" onclick="prev(event);"></a>
+		</h2>
+		<dd>
+			<dl>DL1</dl>
+			<dl>DL2</dl>
+			<dl>DL3</dl>
+			<dl>DL4</dl>
+			<dl>DL5</dl>
+			<dl>DL6</dl>
+			<dl>DL7</dl>
+			<dl>DL8</dl>
+			<dl>DL9</dl>
+			<dl>DL10</dl>
+		</dd>
+	</div>
+</body>
+</html>

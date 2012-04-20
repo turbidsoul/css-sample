@@ -1,16 +1,32 @@
 body {
-	background-color: #e4e4e4;
+	background: url(http://diy.enterdesk.com/2008-11-4/200811040344384827.jpg);
 	font-family: Arial, "MS Trebuchet", sans-serif;
+	text-align: center;
 }
 
 .glass {
-	background-color: #fff;
-	border: 1px solid #eee;
+	background: -moz-linear-gradient(
+		top left,
+		rgba(200, 200, 200, .4),
+		rgba(200, 200, 200, .35),
+		rgba(200, 200, 200, .3),
+		rgba(200, 200, 200, .25),
+		rgba(200, 200, 200, .3),
+		rgba(200, 200, 200, .35),
+		rgba(200, 200, 200, .4),
+		rgba(200, 200, 200, .35),
+		rgba(200, 200, 200, .3),
+		rgba(200, 200, 200, .25),
+		rgba(200, 200, 200, .3),
+		rgba(200, 200, 200, .35)
+	) repeat scroll 0 0 transparent;
 	width: 200px;
 	height: 200px;
 	text-align: center;
 	display: inline-block;
-	*display: inline;
-	
+	position: relative;
+	vertical-align: middle;
+	border: 1px solid rgba(200, 200, 200, .5);
+	box-shadow: 0 0 15px rgba(200, 200, 200, 1);
 }
 

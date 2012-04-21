@@ -1,0 +1,29 @@
+body {
+	background-color: #e3e3e3;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+.glass {
+	background-color: rgba(123, 231, 213, .5);	
+	border: 1px solid rgba(150, 150, 150, .5);
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 700px;
+	top: 300px;
+	box-shadow: 0 0 5px rgba(100, 100, 100, .3),
+				0 0 10px rgba(100, 100, 100, .3),
+				0 0 15px rgba(100, 100, 100, .3),
+				0 0 20px rgba(100, 100, 100, .3);
+	border-radius: 10px;
+	-moz-transition: all 3s ease 0s;
+	opacity: 0.5;
+}
+
+.glass:hover {
+	width: 400px;
+	height: 400px;
+	left: 600px;
+	top: 200px
+}
+

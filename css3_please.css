@@ -4,7 +4,6 @@ body {
 }
 
 .content {
-
 	width: 400px;
 	height: 200px;
 	background: none repeat scroll 0 0 #ccc;
@@ -12,7 +11,6 @@ body {
 	top: 100px;
 	left: 500px;
 	position: absolute;
-
 }
 
 .box_round {
